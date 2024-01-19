@@ -2,12 +2,14 @@ from flask import Flask,jsonify
 from flask_mysqldb import MySQL
 from flask_cors import CORS,cross_origin
 
+#Add mysql connection values in lines 8-12
+
 app=Flask(__name__)
-app.config['MYSQL_HOST']='localhost'
-app.config['MYSQL_USER']='root'
-app.config['MYSQL_PASSWORD']='password'
-app.config['MYSQL_PORT']=3306
-app.config['MYSQL_DB']='db'
+app.config['MYSQL_HOST']=''
+app.config['MYSQL_USER']=''
+app.config['MYSQL_PASSWORD']=''
+app.config['MYSQL_PORT']=0
+app.config['MYSQL_DB']=''
 mysql=MySQL(app)
 cors=CORS(app)
 
